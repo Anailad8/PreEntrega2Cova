@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="shortcut icon" href="../img/icono logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Comienzo del Header que contiene el logo y el menu de navegación-->
+    <header>
+        <!--Al hacer click al logo en el Header de cualquier página del sitio, este me lleva a la página de inicio (index)-->
+        <a href="../index.html"><img class="logo" src="../img/Logo.png" alt="Logo"></a>
+        <nav class="menu-nav">
+            <ul class="menu-items">
+                <li class="item"><a href="conoceme.html">Conóceme</a></li>
+                <li class="item"><a href="promociones.html">Promociones</a></li>
+                <li class="item"><a href="cotiza.html">Cotiza</a></li>
+                <li class="item"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Fin del Header-->
+    <!--Comienzo del Main que contiene descripción de la página web, un formulario de contacto, links a redes sociales y un mapa con la ubicación del local-->
+    <main>
+        <!--Descripción de la página--> 
+        <div class="caja-contacto">
+            <h1 class="title-principal">¿Tienes alguna duda? ¡Contáctame!</h1>
+            <p class="p-main-pages">Hola, encantado de poder atenderte y responder tus dudas, llena este formulario y te responderé en la brevedad posible.</p>
+            <!--Formulario de contacto--> 
+            <form action="">
+                <div>
+                    <h3 class="subtitle">Formulario de contacto</h3>
+                    <label for="name" class="label">Nombre *</label>
+                    <input class="input-form" type="name" placeholder="Ingresa tu nombre" required> <!--Texto-->
+                </div>
+                <div>
+                    <label for="tel" class="label">Teléfono *</label>
+                    <input class="input-form" type="tel" placeholder="Teléfono móvil" required> <!--Números-->
+                </div>
+                <div>
+                    <label for="email" class="label">Email *</label>
+                    <input class="input-form" type="email" placeholder="Ingresa tu correo" required> <!--Texto, números y @-->
+                </div>
+                <div>
+                    <label for="asunto" class="label">Asunto</label>
+                    <input class="input-form" type="text" placeholder="Escribe un título para tu mensaje"> <!--Texto-->
+                </div>
+                <div>
+                    <p class="label">Breve descripción *</p>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje" required></textarea> <!--Texto y números-->
+                </div>
+                <div>
+                    <p class="label">* Campo requerido</p>
+                </div>
+                <div>
+                    <input class="button-enviar" type="submit" value="Enviar"> <!--Se envía cuando los campos requeridos estén llenos-->
+                    <span class="label" >Gracias por comunicarte conmigo</span>
+                </div>
+            </form>    
+        <div class="caja-opciones-contacto"> 
+            <div> <!--Ubicación del local-->
+                <h2 class="secundary-title">También puedes encontrarme en esta dirección</h2>
+                <!--Se agrga un mapa con la ubicación del local-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.0593900834474!2d-70.64157912511689!3d-33.447759197372925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c576975fe1cb%3A0x44fd1ab7710b1965!2sSta%20Victoria%20387%2C%208330255%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1693948427139!5m2!1ses-419!2scl" width="500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+            </div>
+        </div>
+    </main>
+    <!--Fin del Main-->
+    <!--Comienzo del Footer que contiene el logo, el menu de navegación, el copyright y las redes sociales-->
+    <Footer>
+        <div class="caja-footer1">
+            <img class="logo-footer" src="../img/Logo.png" alt="Logo">
+        </div>
+        <div class="caja-footer2">
+            <nav class="menu-nav-footer">
+                <ul class="menu-items-footer">
+                    <li class="item-footer"><a href="conoceme.html">Conóceme</a></li>
+                    <li class="item-footer"><a href="promociones.html">Promociones</a></li>
+                    <li class="item-footer"><a href="cotiza.html">Cotiza</a></li>
+                    <li class="item-footer"><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="copy-right">
+                <p class="copy-right-text">&copy 2023. Sirios Tattoo. Chile</p>
+            </div>
+        </div>
+        <div class="caja-footer3">
+            <a href="http://" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="http://" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="http://" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </Footer>
+    <!--Fin del Footer-->
+    <script src="https://kit.fontawesome.com/dd8b14864b.js" crossorigin="anonymous"></script>
+</body> 
+</html>
