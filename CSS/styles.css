@@ -241,8 +241,8 @@ footer{
 .main-conoceme {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 760px 400px;
-    grid-template-rows: 500px 700px;
+    grid-template-columns: 60% 37%;
+    grid-template-rows: 500px auto;
     grid-template-areas:
         "caja-conoceme sect-ideas"
         "sect-mis-trabajos sect-mis-trabajos";
@@ -257,13 +257,14 @@ footer{
 }
 
 .caja-texto-conoceme{
-    width: 470px;
+    width: 60%;
     height: 450px;
 }
 
 .imagen-persona{
-    width: 240px;
+    width: 220px;
     height: 450px;
+    padding-left: 20px;
 }
 
 /* ----Sección Mis trabajos---- */
@@ -282,23 +283,24 @@ footer{
 
 .sect-ideas{
     grid-area: sect-ideas;
-    width: 300px;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-content: end;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .title-sect-idea{
     text-align: center;
     margin-bottom: 40px;
+    width: 250px;
 }
 
 .imagenes-idea{
     display: grid;
-    grid-template-rows: repeat(2, 100px);
-    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 90px);
+    grid-template-columns: repeat(3, 90px);
     justify-content: center;
     justify-items: center;
 }
@@ -334,7 +336,7 @@ footer{
 }
 
 .third-title{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .link{
@@ -349,7 +351,7 @@ footer{
 
 /* -------------------Dispositivos medianos------------------- */
 
-@media(min-width: 670px) and (max-width: 990px){
+@media(min-width: 768px) and (max-width: 992px){
 
     body{
         grid-template: 
@@ -359,7 +361,7 @@ footer{
         }
 
     header, footer{
-        padding: 0 50px;
+        padding: 0 48px;
     }
 
     .logo{
@@ -371,7 +373,7 @@ footer{
         font-size: 18px;
     }
     
-    .main-index{
+    .main-index, .main-conoceme{
         padding: 30px 50px;
     } 
     
@@ -407,25 +409,101 @@ footer{
         padding: 8px;
     }
 
+/* -------------------Main Conóceme------------------- */
+
+    .main-conoceme {
+        display: grid;
+        grid-gap: 8px;
+        grid-template-rows: 400px auto;
+        }
+
+    .caja-conoceme{
+        margin-bottom: 48px;
+    }
+
+    .caja-texto-conoceme{
+        height: 350px;
+    }
+
+    .imagen-persona{
+        width: 180px;
+        height: 350px;
+        padding-left: 16px;
+    }
+
+    /* ----Sección Mis trabajos---- */
+
+    .sect-mis-trabajos{
+        grid-area: sect-mis-trabajos;
+    }
+
+    .title-sect{
+        height: 24px;
+        margin-bottom: 40px;
+    }
+
+    /* ----Sección Ideas---- */
+
+    .sect-ideas{
+        margin-left: 20px;
+    }
+
+    .title-sect-idea{
+        text-align: center;
+        margin-bottom: 20px;
+        width: 180px;
+    }
+
+    .imagenes-idea{
+        display: grid;
+        grid-template-rows: repeat(3, 90px);
+        grid-template-columns: repeat(2, 90px);
+    }
+
+    /* ----Textos---- */
+
+    .title-principal{
+        font-size: 30px;
+    }    
+
+    .p-main-pages{
+        font-size: 16px;
+        margin-top: 16px;
+    }
+
+    .second-title, .third-title{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .third-title{
+        font-size: 16px;
+    }
+
+    .link{
+        font-size: 14px;
+        font-weight: bold;
+    } 
+
 }
 
 /* -------------------Dispositivos pequeños------------------- */
 
-@media (max-width: 669px) {
+@media (max-width: 767px){
 
     body{
         grid-template: 
-            'header' 56px
+            'header' 80px
             'main' auto
-            'footer' 56px;
+            'footer' 80px;
         }
 
     header, footer{
-        padding: 0 24px;
+        padding: 0 32px;
     }
 
     .logo{
-        width: 95px;
+        width: 120px;
     }
 
     .menu-items, .action_btn{
@@ -456,7 +534,7 @@ footer{
 /* -------------------Main Index------------------- */
 
     .main-index, .main-conoceme{
-        padding: 24px;
+        padding: 32px;
     }
 
     .main-index{
@@ -490,7 +568,7 @@ footer{
     }
 
     .parrafo-agenda{ 
-        width: 170px;
+        width: 300px;
         font-size: 14px;
     }
     
@@ -563,29 +641,24 @@ footer{
     }
 
     .title-sect-idea{
+        width: 100%;
         margin-bottom: 8px;
     }
 
     .imagenes-idea{
         display: grid;
         gap: 8px;
-        grid-template-rows: 56px;
+        grid-template-rows:80px;
         grid-template-columns: repeat(6, 15%);
         justify-content: space-between;
     }
 
     .img-idea{
-        width: 56px;
-        height: 56px;
-        object-fit: cover;
+        width: 72px;
+        height: 72px;
     }
 
     /* ----Textos---- */
-
-    .p-main-pages{
-        font-size: 14px;
-        margin-top: 16px;
-    }
 
     .second-title{
         font-size: 16px;
@@ -601,6 +674,50 @@ footer{
         font-weight: 400;
         margin-top: 8px;
     } 
+
+}
+
+/* -------------------Dispositivos smarphones------------------- */
+
+@media (max-width: 576px) {
+
+    body{
+        grid-template: 
+            'header' 56px
+            'main' auto
+            'footer' 56px;
+        }
+
+    header, footer{
+        padding: 0 24px;
+    }
+
+    .logo{
+        width: 95px;
+    }
+
+/* -------------------Main Index------------------- */
+
+    .main-index, .main-conoceme{
+        padding: 24px;
+    }
+
+    .parrafo-agenda{ 
+        width: 170px;
+        font-size: 14px;
+    }
+
+    /* -------------------Main Conóceme------------------- */
+
+    .imagenes-idea{
+        display: grid;
+        grid-template-rows: 56px;
+    }
+
+    .img-idea{
+        width: 56px;
+        height: 56px;
+    }
 
     } 
 
