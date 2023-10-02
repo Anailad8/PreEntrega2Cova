@@ -4,14 +4,6 @@
     padding: 0;
 }
 
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
 html{
     height: 100%;
 }
@@ -24,6 +16,15 @@ body{
         'main' auto
         'footer' 120px;
 }
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
 
 /* -------------------Header------------------- */
 
@@ -38,19 +39,57 @@ header{
 
 .menu-items{
     display: flex;
-    gap: 40px;
+    gap: 20px;
     font-family: Merienda, sans-serif;
     font-weight: bold;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-items li a{
     color: #ECB935;
 }
 
+.menu-items li a:hover{
+    color: #f7e8c4;
+}
+
+.toggle_btn{
+    color: #ECB935;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+  /* Dropdown menu */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 7.5rem;
+    height: 0;
+    width: 18.75rem;
+    background-color: rgb(53, 52, 52);
+    overflow: hidden;
+    transition: height 0.2s 
+}
+
+.dropdown_menu.open{
+    height: 13.75rem;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* -------------------Main------------------- */
 
-main .main-index, .main-conoceme{
+.main-index, .main-conoceme{
     grid-area: main;
     background-color: #1E1E1E;
     padding: 50px 100px;
@@ -64,6 +103,8 @@ main .main-index, .main-conoceme{
         'sect-galery' auto
         'sect-agenda' auto;
 } 
+
+/* ----Caja principal---- */
 
 .caja-principal{ /**Coloco una imagen como fondo en la sección principal del main**/
     grid-area: caja-principal;
@@ -97,21 +138,20 @@ main .main-index, .main-conoceme{
     margin-bottom: 0;
 }
 
-.sect-galery, .sect-agenda{
+/* ----Galería Carrusel---- */
+
+.carousel-inner, .sect-agenda{
     width: 100%;
     padding-top: 50px;
 }
 
-section > img{
-    height: 300px;
-    width: 250px;
+/* .carousel-item{
+    height: 1000px;
+    width: 100%;
     object-fit: cover;
-}
+} */
 
-.sect-galery{
-    display: flex;
-    justify-content: space-between;
-}
+/* ----Sección Agendar---- */
 
 .sect-agenda{
     grid-area: sect-agenda;
@@ -162,6 +202,8 @@ footer{
     color: rgba(217, 217, 217, .4);
 }
 
+/* ----Copyright---- */
+
 .copy-right{
     text-align: center;
     margin-top: 26px;
@@ -170,6 +212,8 @@ footer{
     font-size: 14px;
     color: rgba(217, 217, 217, .4);
 }
+
+/* ----Caja Footer íconos---- */
 
 .caja-footer3{
     display: flex;
@@ -185,6 +229,7 @@ footer{
     padding: 10px;
 }
 
+/* -------------------Main Conóceme------------------- */
 
 .main-conoceme{
     background-color: #1E1E1E;
@@ -212,6 +257,7 @@ footer{
     height: 470px;
 }
 
+/* ----Sección Mis trabajos---- */
 
 .title-sect{
     text-align: center;
@@ -233,6 +279,7 @@ footer{
     object-fit: cover;
 }
 
+/* ----Sección Ideas---- */
 
 .sect-ideas{
     width: 300px;
@@ -261,12 +308,14 @@ footer{
     object-fit: cover;
 }
 
+/* ----Sección Agendar---- */
 
 .btn-agenda{
     display: flex;
     flex-direction: row-reverse;
 }
 
+/* ----Textos---- */
 
 .p-main-pages{
     font-family: 'Livvic', sans-serif;
@@ -275,7 +324,7 @@ footer{
     margin-top: 24px;
 }
 
-.secundary-title, .third-title{
+.second-title, .third-title{
     font-family: 'Merienda', cursive;
     font-size: 30px;
     font-weight: bold;
@@ -293,4 +342,81 @@ footer{
     font-size: 14px;
     font-weight: bold;
 } 
+
+/* -------------------Media Queries------------------- */
+
+@media(min-width: 670px) and (max-width: 990px){
+
+    body{
+        grid-template: 
+            'header' 100px
+            'main' auto
+            'footer' 100px;
+    }
+
+    header, footer{
+        padding: 0 50px;
+    }
+
+    .logo{
+        width: 145px;
+    }
+
+    .menu-items{
+        gap: 10px;
+        font-size: 18px;
+    }
+    
+    .main-index{
+        padding: 30px 50px;
+    }    
+}
+
+
+@media (max-width: 669px) {
+
+    body{
+        grid-template: 
+            'header' 56px
+            'main' auto
+            'footer' 56px;
+    }
+
+    header, footer{
+        padding: 0 24px;
+    }
+
+    .logo{
+        width: 95px;
+    }
+
+    .menu-nav{
+        display: block;
+        padding: 0;
+    }
+
+    .toggle_btn{
+        align-items: end;
+        padding: 1rem 0.63rem;
+    
+    }
+    
+    .dropdown_menu{
+        top: 11.25rem;
+        width: 100%;
+    }
+    
+    .dropdown_menu li a{
+        display: block;
+    }
+    
+    .dropdown_menu li:hover a{
+        font-size: 1.3rem;
+    }
+
+    .main-index{
+        padding: 24px;
+    }
+    } 
+
 
