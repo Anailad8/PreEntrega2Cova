@@ -238,16 +238,18 @@ footer{
 
 /* -------------------Main Conóceme------------------- */
 
-.main-conoceme{
-    background-color: #1E1E1E;
+.main-conoceme {
     display: grid;
-    grid-template: 
-        'caja-conoceme' 520px
-        'sect-mis-trabajos' 680px
-        'btn-agenda' 56px;
+    grid-gap: 10px;
+    grid-template-columns: 760px 400px;
+    grid-template-rows: 500px 700px;
+    grid-template-areas:
+        "caja-conoceme sect-ideas"
+        "sect-mis-trabajos sect-mis-trabajos";
     }
 
 .caja-conoceme{
+    grid-area: caja-conoceme;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -256,15 +258,19 @@ footer{
 
 .caja-texto-conoceme{
     width: 470px;
-    height: 470px;
+    height: 450px;
 }
 
 .imagen-persona{
     width: 240px;
-    height: 470px;
+    height: 450px;
 }
 
 /* ----Sección Mis trabajos---- */
+
+.sect-mis-trabajos{
+    grid-area: sect-mis-trabajos;
+}
 
 .title-sect{
     text-align: center;
@@ -272,28 +278,16 @@ footer{
     margin-bottom: 50px;
 }
 
-.imagenes-mis-trabajos{
-    display: grid;
-    grid-template-rows: repeat(2, 290px);
-    grid-template-columns: repeat(4, 25%);
-    justify-content: center;
-    justify-items: center;
-}
-
-.img-mis-trabajos{
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-}
-
 /* ----Sección Ideas---- */
 
 .sect-ideas{
+    grid-area: sect-ideas;
     width: 300px;
     display: flex;
     flex-direction: column;
+    align-content: end;
     align-items: center;
-    margin-left: 60px;
+    margin-left: 100px;
 }
 
 .title-sect-idea{
@@ -318,6 +312,7 @@ footer{
 /* ----Sección Agendar---- */
 
 .btn-agenda{
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -460,7 +455,7 @@ footer{
 
 /* -------------------Main Index------------------- */
 
-    .main-index{
+    .main-index, .main-conoceme{
         padding: 24px;
     }
 
@@ -522,6 +517,90 @@ footer{
         font-size: 16px;
         padding: 5px;
     }
+
+    /* -------------------Main Conóceme------------------- */
+
+    .main-conoceme {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 250px auto auto;
+        grid-template-areas:
+            "caja-conoceme"
+            "sect-mis-trabajos"
+            "sect-ideas";
+        }
+
+    .caja-conoceme{
+        margin-bottom: 24px;
+    }
+
+    .caja-texto-conoceme{
+        width: 60%;
+        height: 226px;
+    }
+
+    .p-main-pages{
+        font-size: 0.8rem;
+    }
+
+    .imagen-persona{
+        width: 140px;
+        height: 226px;
+    }
+
+    /* ----Sección Mis trabajos---- */
+
+    .title-sect{
+        height: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* ----Sección Ideas---- */
+
+    .sect-ideas{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .title-sect-idea{
+        margin-bottom: 8px;
+    }
+
+    .imagenes-idea{
+        display: grid;
+        gap: 8px;
+        grid-template-rows: 56px;
+        grid-template-columns: repeat(6, 15%);
+        justify-content: space-between;
+    }
+
+    .img-idea{
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+    }
+
+    /* ----Textos---- */
+
+    .p-main-pages{
+        font-size: 14px;
+        margin-top: 16px;
+    }
+
+    .second-title{
+        font-size: 16px;
+    }
+
+    .third-title{
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .link{
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 8px;
+    } 
 
     } 
 
