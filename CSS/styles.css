@@ -15,7 +15,7 @@ body{
         'header' 120px
         'main' auto
         'footer' 120px;
-}
+    }
 
 ul{
     list-style: none;
@@ -47,7 +47,7 @@ header{
     padding: 0;
 }
 
-.menu-items li a{
+.menu-items li a {
     color: #ECB935;
 }
 
@@ -63,31 +63,40 @@ header{
 }
 
   /* Dropdown menu */
+
 .dropdown_menu{
     display: none;
     position: absolute;
     z-index: 1;
     right: 0;
-    top: 7.5rem;
+    top: 3.5rem;
     height: 0;
-    width: 18.75rem;
+    width: 10rem;
     background-color: rgb(53, 52, 52);
     overflow: hidden;
     transition: height 0.2s 
 }
 
 .dropdown_menu.open{
-    height: 13.75rem;
+    height: 11rem;
+    padding: 0;
 }
 
 .dropdown_menu li{
-    padding: 0.7rem;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* -------------------Main------------------- */
+.item-dm a{
+    color: #ECB935;
+    font-family: 'Merienda';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* -------------------Main Index------------------- */
 
 .main-index, .main-conoceme{
     grid-area: main;
@@ -102,7 +111,7 @@ header{
         'caja-principal' 1000px
         'sect-galery' auto
         'sect-agenda' auto;
-} 
+    } 
 
 /* ----Caja principal---- */
 
@@ -144,12 +153,6 @@ header{
     width: 100%;
     padding-top: 50px;
 }
-
-/* .carousel-item{
-    height: 1000px;
-    width: 100%;
-    object-fit: cover;
-} */
 
 /* ----Sección Agendar---- */
 
@@ -206,11 +209,15 @@ footer{
 
 .copy-right{
     text-align: center;
-    margin-top: 26px;
+    margin: 26px 0 0 0;
     font-family: Livvic;
     font-weight: 400px;
     font-size: 14px;
     color: rgba(217, 217, 217, .4);
+}
+
+.copy-right-text{
+    margin: 0;
 }
 
 /* ----Caja Footer íconos---- */
@@ -226,7 +233,7 @@ footer{
     font-size: 24px;
     border: solid;
     border-radius: 50%;
-    padding: 10px;
+    padding: 8px;
 }
 
 /* -------------------Main Conóceme------------------- */
@@ -238,7 +245,7 @@ footer{
         'caja-conoceme' 520px
         'sect-mis-trabajos' 680px
         'btn-agenda' 56px;
-}
+    }
 
 .caja-conoceme{
     display: flex;
@@ -343,7 +350,9 @@ footer{
     font-weight: bold;
 } 
 
-/* -------------------Media Queries------------------- */
+/* -----------------------------MEDIA QUERIES----------------------------- */
+
+/* -------------------Dispositivos medianos------------------- */
 
 @media(min-width: 670px) and (max-width: 990px){
 
@@ -352,14 +361,14 @@ footer{
             'header' 100px
             'main' auto
             'footer' 100px;
-    }
+        }
 
     header, footer{
         padding: 0 50px;
     }
 
     .logo{
-        width: 145px;
+        width: 140px;
     }
 
     .menu-items{
@@ -369,9 +378,43 @@ footer{
     
     .main-index{
         padding: 30px 50px;
-    }    
+    } 
+    
+    .parrafo-agenda{ 
+        width: 380px;
+    }
+
+/* -------------------Footer------------------- */
+
+    .menu-items-footer{
+        width: 250px;
+        font-size: 12px;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    /* ----Copyright---- */
+
+    .copy-right{
+        text-align: center;
+        margin: 16px 0 0 0;
+        font-size: 12px;
+    }
+
+    /* ----Caja Footer íconos---- */
+
+    .caja-footer3{
+        width: 150px;
+    }
+
+    .fa-whatsapp, .fa-instagram, .fa-tiktok{
+        font-size: 20px;
+        padding: 8px;
+    }
+
 }
 
+/* -------------------Dispositivos pequeños------------------- */
 
 @media (max-width: 669px) {
 
@@ -380,7 +423,7 @@ footer{
             'header' 56px
             'main' auto
             'footer' 56px;
-    }
+        }
 
     header, footer{
         padding: 0 24px;
@@ -390,33 +433,96 @@ footer{
         width: 95px;
     }
 
-    .menu-nav{
+    .menu-items, .action_btn{
+        display: none;
+    }
+    
+    .menu-nav .toggle_btn {
         display: block;
-        padding: 0;
+    }
+    
+    .dropdown_menu{
+        display: block;
     }
 
     .toggle_btn{
         align-items: end;
         padding: 1rem 0.63rem;
-    
     }
-    
-    .dropdown_menu{
-        top: 11.25rem;
-        width: 100%;
-    }
-    
+
     .dropdown_menu li a{
         display: block;
     }
-    
+
     .dropdown_menu li:hover a{
-        font-size: 1.3rem;
+        color: #f7e8c4;
     }
+
+/* -------------------Main Index------------------- */
 
     .main-index{
         padding: 24px;
     }
+
+    .main-index{
+        grid-template: 
+            'caja-principal' 300px
+            'sect-galery' auto
+            'sect-agenda' auto;    
+    } 
+    
+    /* ----Caja principal---- */
+    
+    .caja-texto-principal{
+        width: 160px;
+        height: 160px;
+        margin: 20px;
+    }
+    
+    .title-principal{
+        font-size: 20px;
+    }
+    
+    .p-main{
+        font-size: 14px;
+    }
+    
+    /* ----Galería Carrusel---- */
+    
+    .carousel-inner, .sect-agenda{
+        width: 100%;
+        padding-top: 32px;
+    }
+
+    .parrafo-agenda{ 
+        width: 170px;
+        font-size: 14px;
+    }
+    
+    /* -------------------Footer------------------- */
+
+    .menu-items-footer{
+        display: none;
+    }
+
+/* ----Copyright---- */
+
+    .copy-right{
+        margin: 0;
+        font-size: 12px;
+    }
+
+    /* ----Caja Footer íconos---- */
+
+    .caja-footer3{
+        width: 120px;
+    }
+
+    .fa-whatsapp, .fa-instagram, .fa-tiktok{
+        font-size: 16px;
+        padding: 5px;
+    }
+
     } 
 
 
