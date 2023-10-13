@@ -45,45 +45,51 @@
         <div class="main-contacto">
             <div class="caja-contacto">
                 <h1 class="title-principal">¿Tienes alguna duda? ¡Contáctame!</h1>
-                <p class="p-main-pages">Hola, encantado de poder atenderte y responder tus dudas, llena este formulario y te responderé en la brevedad posible.</p>
+                <div class="caja-texto-contacto">
+                    <p class="p-main-pages">Hola, encantado de poder atenderte y responder tus dudas, llena este formulario y te responderé en la brevedad posible.</p>
+                </div>
+            </div>
                 <!--Formulario de contacto--> 
-                <form action="">
-                    <div>
+            <div class="container">
+                <form action="" class="form">
+                    <div class="row">
                         <h3 class="subtitle">Formulario de contacto</h3>
-                        <label for="name" class="label">Nombre *</label>
-                        <input class="input-form" type="name" placeholder="Ingresa tu nombre" required> <!--Texto-->
-                    </div>
-                    <div>
-                        <label for="tel" class="label">Teléfono *</label>
-                        <input class="input-form" type="tel" placeholder="Teléfono móvil" required> <!--Números-->
-                    </div>
-                    <div>
-                        <label for="email" class="label">Email *</label>
-                        <input class="input-form" type="email" placeholder="Ingresa tu correo" required> <!--Texto, números y @-->
-                    </div>
-                    <div>
-                        <label for="asunto" class="label">Asunto</label>
-                        <input class="input-form" type="text" placeholder="Escribe un título para tu mensaje"> <!--Texto-->
-                    </div>
-                    <div>
-                        <p class="label">Breve descripción *</p>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje" required></textarea> <!--Texto y números-->
-                    </div>
-                    <div>
-                        <p class="label">* Campo requerido</p>
-                    </div>
-                    <div>
-                        <input class="button-enviar" type="submit" value="Enviar"> <!--Se envía cuando los campos requeridos estén llenos-->
-                        <span class="label" >Gracias por comunicarte conmigo</span>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="name" class="label">Nombre *</label>
+                            <input class="input-form" type="name" placeholder="Ingresa tu nombre" required> <!--Texto-->
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="tel" class="label">Teléfono *</label>
+                            <input class="input-form" type="tel" placeholder="Teléfono móvil" required> <!--Números-->
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="email" class="label">Email *</label>
+                            <input class="input-form" type="email" placeholder="Ingresa tu correo" required> <!--Texto, números y @-->
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="asunto" class="label">Asunto</label>
+                            <input class="input-form" type="text" placeholder="Escribe un título para tu mensaje"> <!--Texto-->
+                        </div>
+                        <div class="col-12 col-md-12 py-1">
+                            <p class="label">Breve descripción *</p>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje" required></textarea> <!--Texto y números-->
+                        </div>
+                        <div>
+                            <p class="label">* Campo requerido</p>
+                        </div>
+                        <div>
+                            <input class="button-enviar" type="submit" value="Enviar"> <!--Se envía cuando los campos requeridos estén llenos-->
+                            <span class="label" >Gracias por comunicarte conmigo</span>
+                        </div>
                     </div>
                 </form>
             </div>
-            <div class="caja-opciones-contacto"> 
-                <div> <!--Ubicación del local-->
+            <div class="caja-opciones-contacto"> <!--Ubicación del local-->
+                <div class="subtitle-opc-cont">
                     <h2 class="second-title">También puedes encontrarme en esta dirección</h2>
-                    <!--Se agrga un mapa con la ubicación del local-->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.0593900834474!2d-70.64157912511689!3d-33.447759197372925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c576975fe1cb%3A0x44fd1ab7710b1965!2sSta%20Victoria%20387%2C%208330255%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1693948427139!5m2!1ses-419!2scl" width="500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
                 </div>
+                <!--Se agrega un mapa con la ubicación del local-->
+                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.0593900834474!2d-70.64157912511689!3d-33.447759197372925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c576975fe1cb%3A0x44fd1ab7710b1965!2sSta%20Victoria%20387%2C%208330255%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1693948427139!5m2!1ses-419!2scl" width="500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
             </div>    
         </div>
     </main>

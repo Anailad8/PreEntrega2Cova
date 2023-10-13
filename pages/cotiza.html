@@ -44,67 +44,75 @@
         <div class="main-cotiza">
             <div class="caja-cotiza">
                 <h1 class="title-principal">Cotiza el tatuaje que quieres</h1>
-                <p class="p-main-pages">Hola, para mí es un gusto que quieras realizar tu tatuaje conmigo y para poder responderte y atenderte de manera más rápida solo debes llenar este formulario que me será muy útil para cotizar.</p>
+                <div class="caja-texto-cotiza">
+                    <p class="p-main-pages">Hola, para mí es un gusto que quieras realizar tu tatuaje conmigo y para poder responderte y atenderte de manera más rápida solo debes llenar este formulario que me será muy útil para cotizar.</p>
+                </div>    
             </div>
             <!--Formulario para cotizar--> 
-            <form action="" class="form">
-                <div>
-                    <h3 class="subtitle">Datos de contacto</h3>
-                    <label for="name" class="label">Nombre *</label>
-                    <input class="input-form" type="name" placeholder="Ingresa tu nombre" required> <!--Texto-->
-                </div>
-                <div>
-                    <label for="age" class="label">Edad</label>
-                    <input class="input-form" type="number" placeholder="Ingresa tu edad"> <!--Números-->
-                </div>
-                <div>
-                    <label for="tel" class="label">Teléfono *</label>
-                    <input class="input-form" type="tel" placeholder="Teléfono móvil" required> <!--Números-->
-                </div>
-                <div>
-                    <label for="email" class="label">Email *</label>
-                    <input class="input-form" type="email" placeholder="Ingresa tu correo" required> <!--Texto, números y @-->
-                </div>
-                <div>
-                    <h3 class="subtitle">Para tu tatuaje necesito que me indiques:</h3>
-                    <label for="zone" class="label">Zona del cuerpo a tatuar *</label>
-                    <input class="input-form" type="text" required> <!--Texto-->
-                </div>
-                <div>
-                    <label for="cm" class="label">Tamaño del tatuaje en cms *</label>
-                    <input class="input-form" type="number" required> <!--Números-->
-                </div>
-                <div>
-                    <p class="label">Breve descripción *</p>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Describe tu tatuaje o idea" required></textarea> <!--Texto y números-->
-                </div>
-                <div>
-                    <h3 class="subtitle">Tipo de tatuaje</h3> <!--Solo se puede seleccionar una opción-->
-                    <div>
-                        <input class="input-form" type="radio" name="usuario">
-                        <span class="label">Black & gray</span>
+            <div class="container">
+                <form action="" class="form">
+                    <div class="row">
+                        <h3 class="subtitle">Datos de contacto</h3>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="name" class="label">Nombre *</label>
+                            <input class="input-form" type="name" placeholder="Ingresa tu nombre" required> <!--Texto-->
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="age" class="label">Tu edad</label>
+                            <input class="input-form" type="number" placeholder="Ingresa tu edad"> <!--Números-->
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="tel" class="label">Teléfono *</label>
+                            <input class="input-form" type="tel" placeholder="Teléfono móvil" required> <!--Números-->
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="email" class="label">Email *</label>
+                            <input class="input-form" type="email" placeholder="Ingresa tu correo" required> <!--Texto, números y @-->
+                        </div>
+                        <h3 class="subtitle">Para tu tatuaje necesito que me indiques:</h3>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="zone" class="label">Zona del cuerpo a tatuar *</label>
+                            <input class="input-form" type="text" required> <!--Texto-->
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 py-1">
+                            <label for="cm" class="label">Tamaño del tatuaje en cms *</label>
+                            <input class="input-form" type="number" required> <!--Números-->
+                        </div>
+                        <div class="col-12 col-md-12 py-1">
+                            <p class="label">Breve descripción *</p>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Describe tu tatuaje o idea" required></textarea> <!--Texto y números-->
+                        </div>
+                        <div class="col-12 col-md-12 py-1">
+                            <h3 class="subtitle">Tipo de tatuaje</h3> <!--Solo se puede seleccionar una opción-->
+                            <div>
+                                <input class="input-form" type="radio" name="usuario">
+                                <span class="label">Black & gray</span>
+                            </div>
+                            <div>
+                                <input class="input-form" type="radio" name="usuario">
+                                <span class="label">Detalles en color</span>
+                            </div>
+                            <div>
+                                <input class="input-form" type="radio" name="usuario">
+                                <span class="label">Full color</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="label">* Campo requerido</p>
+                        </div>
+                        <div>
+                            <input class="button-enviar" type="submit" value="Enviar"> <!--Se envía cuando los campos requeridos estén llenos-->
+                        </div>
                     </div>
-                    <div>
-                        <input class="input-form" type="radio" name="usuario">
-                        <span class="label">Detalles en color</span>
-                    </div>
-                    <div>
-                        <input class="input-form" type="radio" name="usuario">
-                        <span class="label">Full color</span>
-                    </div>
-                </div>
-                <div>
-                    <p class="label">* Campo requerido</p>
-                </div>
-                <div>
-                    <input class="button-enviar" type="submit" value="Enviar"> <!--Se envía cuando los campos requeridos estén llenos-->
-                </div>
-            </form>
+                </form>
+            </div>
             <!--Información relevante--> 
-            <div class="caja-texto-cotiza">
+            <div class="sect-saber">
                 <h2 class="second-title">Lo que debes saber</h2>
-                <p class="parrafo-cotiza">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque temporibus porro corporis repellat fugiat, accusantium, commodi ducimus recusandae unde in delectus voluptatem voluptatum distinctio veritatis aspernatur sit tenetur ab rem.
-                Quo nisi molestiae deleniti doloremque repudiandae quaerat perspiciatis voluptatibus? Quaerat ab impedit sint non illo expedita, inventore ducimus sit soluta earum fuga libero eveniet consequuntur corrupti, eos, ratione in excepturi!</p>
+                <p class="p-main-pages">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex omnis, pariatur unde maxime commodi quibusdam enim voluptas dolor repellendus repellat ea atque, nihil facilis id, laboriosam laborum. Quod, obcaecati!</p>
+                <p class="p-main-pages">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex omnis, pariatur unde maxime commodi quibusdam enim voluptas dolor repellendus repellat ea atque, nihil facilis id, laboriosam laborum. Quod, obcaecati!</p>
+                <p class="p-main-pages">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex omnis, pariatur unde maxime commodi quibusdam enim voluptas dolor repellendus repellat ea atque, nihil facilis id, laboriosam laborum. Quod, obcaecati!</p>
+
             </div>    
         </div>
     </main>
