@@ -1,0 +1,45 @@
+.main-index{
+    grid-area: main;
+    background-color: #1E1E1E;
+    padding: 50px 100px;
+    min-height: 100%;
+    display: grid;
+    grid-template: 
+        'caja-principal' 1000px
+        'sect-galery' auto
+        'sect-agenda' auto;
+    /* ----Caja principal---- */
+    .caja-principal{ /**Coloco una imagen como fondo en la sección principal del main**/
+        grid-area: caja-principal;
+        background-image: url(../img/fondo-main.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        .caja-texto-principal{ /**Descripción del sitio web**/
+            text-align: center;
+            width: 330px;
+            height: 300px;
+            margin: 45px;
+        }        
+    }
+    /* ----Galería Carrusel---- */
+    .carousel-inner, .sect-agenda{
+        width: 100%;
+        padding-top: 50px;
+    }
+    /* ----Sección Agendar---- */
+    .sect-agenda{
+        grid-area: sect-agenda;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .parrafo-agenda{ 
+            font-family: 'Merienda', cursive;
+            font-size: 20px;
+            color: #d9d9d9;
+        }
+    }
+}

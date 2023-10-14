@@ -1,0 +1,29 @@
+.main-contacto{
+    grid-area: main;
+    background-color: #1E1E1E;
+    padding: 50px 100px;
+    min-height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    .caja-contacto, .caja-texto-contacto{
+        justify-content: center;
+        .caja-texto-contacto{
+            width: 100%;
+            padding: 0 50px;
+        }        
+    }
+    .caja-opciones-contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        .subtitle-opc-cont{
+            text-align: center;
+        }
+        .mapa{
+            margin-top: 40px;
+        }    
+    }        
+}
