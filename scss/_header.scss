@@ -1,6 +1,6 @@
 header{
     grid-area: header;
-    background-color: #0D0C0C;
+    background-color: $bg-hf;
     display: flex;
     padding: 0 100px;
     justify-content: space-between;
@@ -8,57 +8,50 @@ header{
     .menu-items{
         display: flex;
         gap: 20px;
-        font-family: Merienda, sans-serif;
+        font-family: $primary-font-f;
         font-weight: bold;
         font-size: 20px;
         margin: 0;
         padding: 0;
         li a {
-            color: #ECB935;
+            color: $primary-color;
             &:hover{
                 color: #f7e8c4;
             }
         }
     }
-}
-
-.toggle_btn{
-    color: #ECB935;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-  /* Dropdown menu */
-
-.dropdown_menu{
-    display: none;
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    top: 3.5rem;
-    height: 0;
-    width: 10rem;
-    background-color: rgb(53, 52, 52);
-    overflow: hidden;
-    transition: height 0.2s 
-}
-
-.dropdown_menu.open{
-    height: 11rem;
-    padding: 0;
-}
-
-.dropdown_menu li{
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.item-dm a{
-    color: #ECB935;
-    font-family: 'Merienda';
-    font-size: 16px;
-    font-weight: bold;
+    .toggle_btn{
+        color: $primary-color;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+    }
+      /* Dropdown menu */
+    .dropdown_menu{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 3.5rem;
+        height: 0;
+        width: 10rem;
+        background-color: rgb(53, 52, 52);
+        overflow: hidden;
+        transition: height 0.2s 
+        &open{
+            transition-heigt: 11rem;
+            transition-padding: 0;
+        }
+        li{
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .item-dm a{
+                @extend .principal-font;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
 }

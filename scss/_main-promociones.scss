@@ -1,21 +1,12 @@
 .main-promociones{
-    grid-area: main;
-    background-color: #1E1E1E;
-    padding: 50px 100px;
-    min-height: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
+    @extend .main-general;
+    @extend %flex-wrap;
     .caja-promociones{ 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @extend %flex-column-items-center;
         width: 100%;
         margin-bottom: 50px;
         background-image: url(../img/tt/desktop-wallpaper-tattoo-artist.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        @extend %background-image-properties;
         .caja-texto-promociones{
             text-align: center;
             width: 55%;
@@ -27,21 +18,16 @@
         }            
     }
     .concurso{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-column-center;
         width: 100%;
         height: 200px;
         margin-bottom: 50px;    
         background-color: #0d0c0cb0;
-        border: 2px solid #ECB935;
+        border: 2px solid $primary-color;
         border-radius: 10px;
         .text-concurso{
-            display: flex;
-            flex-direction: column;
+            @extend %flex-column-items-center;
             gap: 10px;
-            align-items: center;
             text-align: center;
             width: 100%;
         }    
@@ -53,17 +39,16 @@
         .card{
             border: none;
             .card-body{
-                background-color: #1E1E1E;
+                background-color: $bg-main;
                 .link-promo{
                     text-decoration: none;
-                    color: #ECB935;
+                    color: $primary-color;
                 }        
             }    
         }    
     }
     .btn-agenda-p{
-        display: flex;
-        justify-content: center;
+        @extend %flex-jcenter;
         width: 100%;
         height: 56px;
     }        

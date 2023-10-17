@@ -1,0 +1,52 @@
+.principal-font{
+    font-family: $primary-font-f; 
+    color: $primary-color;
+}
+
+.second-font{
+    font-family: $second-fond-f;
+    color: $second-color;
+}
+
+.main-general{
+    grid-area: main;
+    background-color: $bg-main;
+    padding: 50px 100px;
+    min-height: 100%;
+    }
+
+%background-image-properties{
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+%flex-jcenter{
+    display: flex;
+    justify-content: center;
+}
+
+%flex-space-center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+%flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-column-items-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%flex-wrap{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
