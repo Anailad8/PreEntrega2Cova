@@ -10,7 +10,7 @@
         grid-area: caja-principal;
         background-image: url(../img/Background/fondo-main.webp);
         @extend %background-image-properties;
-        @extend %flex-jcenter;
+        @include flex(flex,row,center,normal);
         width: 100%;
         .caja-texto-principal{ /**Descripción del sitio web**/
             text-align: center;
@@ -27,7 +27,7 @@
     /* ----Sección Agendar---- */
     .sect-agenda{
         grid-area: sect-agenda;
-        @extend %flex-space-center;
+        @include flex(flex,row,space-around,center);
         .parrafo-agenda{ 
             font-family: $primary-font-f;
             font-size: 20px;

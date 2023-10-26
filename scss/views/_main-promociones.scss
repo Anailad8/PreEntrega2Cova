@@ -1,8 +1,8 @@
 .main-promociones{
     @extend .main-general;
     @extend %flex-wrap;
-    .caja-promociones{ 
-        @extend %flex-column-items-center;
+    .caja-promociones{
+        @include flex(flex,column,normal,center);
         width: 100%;
         margin-bottom: 50px;
         background-image: url(../img/Background/Main-promociones.webp);
@@ -18,7 +18,7 @@
         }            
     }
     .concurso{
-        @extend %flex-column-center;
+        @include flex(flex,column,center,center);
         width: 100%;
         height: 200px;
         margin-bottom: 50px;    
@@ -26,7 +26,7 @@
         border: 2px solid $primary-color;
         border-radius: 10px;
         .text-concurso{
-            @extend %flex-column-items-center;
+            @include flex(flex,column,normal,center);
             gap: 10px;
             text-align: center;
             width: 100%;
@@ -54,7 +54,7 @@
         }    
     }
     .btn-agenda-p{
-        @extend %flex-jcenter;
+        @include flex(flex,row,center,normal);
         width: 100%;
         height: 56px;
     }        

@@ -22,30 +22,6 @@
   background-repeat: no-repeat;
 }
 
-.main-promociones .btn-agenda-p, .main-index .caja-principal {
-  display: flex;
-  justify-content: center;
-}
-
-.main-index .sect-agenda {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.main-contacto .caja-opciones-contacto, .main-promociones .concurso {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-promociones .concurso .text-concurso, .main-promociones .caja-promociones, .main-conoceme .sect-ideas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .main-contacto, .main-cotiza, .main-promociones {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -214,6 +190,10 @@ header .dropdown_menu li .item-dm a {
 .main-index .caja-principal {
   grid-area: caja-principal;
   background-image: url(../img/Background/fondo-main.webp);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
   width: 100%;
 }
 .main-index .caja-principal .caja-texto-principal { /**Descripción del sitio web**/
@@ -228,6 +208,10 @@ header .dropdown_menu li .item-dm a {
 }
 .main-index .sect-agenda {
   grid-area: sect-agenda;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .main-index .sect-agenda .parrafo-agenda {
   font-family: "Merienda", cursive;
@@ -330,10 +314,19 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   height: 100%;
   object-fit: cover;
 }
+.main-conoceme .sect-mis-trabajos .img-fluid:hover {
+  transition: 1s;
+  transform: scale(1.5);
+  cursor: pointer;
+}
 .main-conoceme .sect-ideas {
   grid-area: sect-ideas;
   width: auto;
   align-content: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   margin-top: 100px;
 }
 .main-conoceme .sect-ideas .title-sect-idea {
@@ -360,6 +353,10 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
 }
 
 .main-promociones .caja-promociones {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
   width: 100%;
   margin-bottom: 50px;
   background-image: url(../img/Background/Main-promociones.webp);
@@ -374,6 +371,10 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   border-radius: 10px;
 }
 .main-promociones .concurso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 200px;
   margin-bottom: 50px;
@@ -382,6 +383,10 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   border-radius: 10px;
 }
 .main-promociones .concurso .text-concurso {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
   gap: 10px;
   text-align: center;
   width: 100%;
@@ -408,6 +413,10 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   color: #ECB935;
 }
 .main-promociones .btn-agenda-p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
   width: 100%;
   height: 56px;
 }
@@ -441,6 +450,10 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   padding: 0 50px;
 }
 .main-contacto .caja-opciones-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 50px;
 }
 .main-contacto .caja-opciones-contacto .subtitle-opc-cont {

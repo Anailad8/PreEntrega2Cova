@@ -9,7 +9,7 @@
         }        
     }
     .caja-opciones-contacto{
-        @extend %flex-column-center;
+        @include flex(flex,column,center,center);
         margin-top: 50px;
         .subtitle-opc-cont{
             text-align: center;
