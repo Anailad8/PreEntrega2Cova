@@ -71,12 +71,21 @@
     .main-conoceme {
         padding: 48px;
         grid-gap: 8px;
-        grid-template-rows: 530px auto;
+        grid-template-rows: auto auto;
         .caja-conoceme{
             margin-bottom: 48px;
-            .imagen-persona{
-                padding-left: 16px;
-            }        
+            .caja-texto-imagen{
+                height: 375px;
+                .caja-texto-conoceme, .caja-imagen-persona{
+                    height: 375px;
+                }
+                .caja-imagen-persona{
+                    padding-left: 16px;
+                    .imagen-persona{
+                        height: 375px;
+                    }
+                }            
+            }
         }
         .sect-mis-trabajos{    /* ----Sección Mis trabajos---- */
             .title-sect{
@@ -287,11 +296,16 @@
             margin-bottom: 24px;
             .caja-texto-imagen{
                 height: 226px;
-                .caja-texto-conoceme, .imagen-persona{
+                .caja-texto-conoceme, .caja-imagen-persona{
                     height: 226px;
                     .p-main-pages{
                         font-size: 14px;
                     }                
+                    .imagen-persona{
+                        width: 180px;
+                        height: 226px;
+                        object-position: top;
+                    }
                 }
             } 
         }
@@ -300,6 +314,10 @@
                 height: 20px;
                 margin-bottom: 20px;
             }
+            .img-fluid{
+                width: 100%;
+                height: 300px;
+            }    
         }
         .sect-ideas{    /* ----Sección Ideas---- */
             width: 100%;
@@ -369,10 +387,14 @@
         .sect-prom{
             margin-bottom: 24px;
             .card{
+                margin-bottom: 24px;
                 .card-img-top{
                     max-height: 200px;
                     object-fit: cover;
                 }        
+                .card-body{
+                    height: 165px;
+                }            
             }
         }
     }                        
@@ -454,15 +476,21 @@
                 flex-direction: column;
                 align-items: center;
                 height: auto;
-                .caja-texto-conoceme{
-                    width: 100%;
+                .caja-texto-conoceme, .caja-imagen-persona{
+                    width: 95%;
                     height: auto;
                     text-align: center;
                 }
-                .imagen-persona{
-                    width: 80%;
-                    height: 180px;
-                    padding: 0;
+                .caja-imagen-persona{
+                    padding: 20px 0 0 0;
+                    width: 100%;
+                    height: auto;
+                    .imagen-persona{
+                        width: 95%;
+                        height: 250px;
+                        padding: 0;
+                        object-position: top;
+                    }
                 }
             }
         } 
@@ -471,6 +499,11 @@
                 height: 20px;
                 margin-bottom: 20px;
             }
+            .img-fluid{
+                width: 100%;
+                height: 200px;
+                object-position: top;
+            }    
         }
         .sect-ideas{    /* ----Sección Ideas---- */
             .imagenes-idea{
@@ -491,24 +524,15 @@
         padding: 24px;
         .sect-prom{
             .card{
-                .card-img-top{
-                    max-height: 200px;
-                    object-fit: cover;
-                }        
+                margin-bottom: 16px;
+                .card-body{
+                    height: 145px;
+                }            
             }
         }
     }                        
 
-    // .caja-promociones{
-    //     align-items: center;
-    // }
-
-    // .caja-texto-promociones{
-    //     width: 80%;
-    //     margin: 24px;
-    // }    
-
-/* -------------------Main Contacto------------------- */
+    /* -------------------Main Contacto------------------- */
 
     .main-contacto{
         padding: 24px;

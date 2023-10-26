@@ -8,7 +8,7 @@
     /* ----Caja principal---- */
     .caja-principal{
         grid-area: caja-principal;
-        background-image: url(../img/fondo-main.png);
+        background-image: url(../img/Background/fondo-main.webp);
         @extend %background-image-properties;
         @extend %flex-jcenter;
         width: 100%;

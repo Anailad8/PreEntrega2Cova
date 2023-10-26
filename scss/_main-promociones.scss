@@ -5,7 +5,7 @@
         @extend %flex-column-items-center;
         width: 100%;
         margin-bottom: 50px;
-        background-image: url(../img/tt/desktop-wallpaper-tattoo-artist.jpg);
+        background-image: url(../img/Background/Main-promociones.webp);
         @extend %background-image-properties;
         .caja-texto-promociones{
             text-align: center;
@@ -38,8 +38,14 @@
         margin-bottom: 50px;
         .card{
             border: none;
+            box-shadow: 0 5px 8px 0 #0d0c0cb0;
+            .card-img-top{
+                height: 180px;
+                object-fit: cover;
+            }
             .card-body{
                 background-color: $bg-main;
+                height: 185px;
                 .link-promo{
                     text-decoration: none;
                     color: $primary-color;
