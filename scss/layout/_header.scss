@@ -1,11 +1,9 @@
-header{
+header {
     grid-area: header;
     background-color: $bg-hf;
-    display: flex;
+    @include flex(flex,row,space-between,center);
     padding: 0 100px;
-    justify-content: space-between;
-    align-items: center;
-    .menu-items{
+    .nav-links{
         display: flex;
         gap: 20px;
         font-family: $primary-font-f;
@@ -16,42 +14,24 @@ header{
         li a {
             color: $primary-color;
             &:hover{
-                color: #f7e8c4;
-            }
-        }
-    }
-    .toggle_btn{
-        color: $primary-color;
-        font-size: 1.5rem;
-        cursor: pointer;
-        display: none;
-    }
-      /* Dropdown menu */
-    .dropdown_menu{
-        display: none;
-        position: absolute;
-        z-index: 1;
-        right: 0;
-        top: 3.5rem;
-        height: 0;
-        width: 10rem;
-        background-color: rgb(53, 52, 52);
-        overflow: hidden;
-        transition: height 0.2s 
-        &open{
-            transition-heigt: 11rem;
-            transition-padding: 0;
-        }
-        li{
-            padding: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .item-dm a{
-                @extend .principal-font;
-                font-size: 16px;
-                font-weight: bold;
-            }
-        }
-    }
+                color: $hover-color;
+            }     
+        }     
+    }     
+}
+
+/* Estilos para el menú hamburguesa */
+
+.menu-toggle{
+    display: none;
+}
+.menu-btn{
+    display: none;
+}
+.menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #ECB935;
+    margin: 3px 0;
+    transition: 0.4s;
 }
