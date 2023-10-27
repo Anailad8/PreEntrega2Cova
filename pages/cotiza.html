@@ -7,6 +7,7 @@
     <meta name="keywords" content="SIRIOS TATTOO, TATUAJES, COTIZAR, IDEAS, DISEÑOS, AGENDAR, TIPS DE TATUAJES ">
     <title>Cotiza. Sirios Tattoo</title>
     <link rel="shortcut icon" href="../img/Logo/icono logo.svg" type="image/x-icon">
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet">
@@ -22,23 +23,20 @@
     <header> 
         <!--Al hacer click al logo en el Header de cualquier página del sitio, este me lleva a la página de inicio (index)-->
         <a href="../index.html"><img class="logo" src="../img/Logo/Logo.webp" alt="Logo de la marca Sirios Tattoo"></a>
-        <nav class="menu-nav">
-            <ul class="menu-items">
-                <li class="item"><a href="conoceme.html">Conóceme</a></li> 
-                <li class="item"><a href="promociones.html">Promociones</a></li>
-                <li class="item"><a href="cotiza.html">Cotiza</a></li>
-                <li class="item"><a href="contacto.html">Contacto</a></li>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-btn">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+        </label>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="conoceme.html">Conoceme</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="cotiza.html">Cotiza</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
         </nav>
-            <ul class="dropdown_menu">
-                <li class="item-dm"><a href="conoceme.html">Conóceme</a></li> 
-                <li class="item-dm"><a href="promociones.html">Promociones</a></li>
-                <li class="item-dm"><a href="cotiza.html">Cotiza</a></li>
-                <li class="item-dm"><a href="contacto.html">Contacto</a></li>
-            </ul>
     </header> 
     <!--Fin del Header-->
     <!--Comienzo del Main que contiene descripción de la página web y un formulario para cotizar-->
@@ -145,6 +143,5 @@
     </Footer>
     <!--Fin del Footer-->
     <script src="https://kit.fontawesome.com/dd8b14864b.js" crossorigin="anonymous"></script>
-    <script src="../JS/JS.js"></script>
 </body> 
 </html>

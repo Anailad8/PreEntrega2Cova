@@ -1,4 +1,4 @@
-/* -------------------Dispositivos medianos------------------- */
+/* ------------------------Dispositivos medianos------------------------ */
 
 @media(min-width: 768px) and (max-width: 992px){
 
@@ -14,14 +14,16 @@
         .logo{
             width: 140px;
         }
-        .menu-nav{
-            .menu-items{
+        nav{
+            .nav-links{
                 gap: 10px;
                 font-size: 18px;
             }    
         }
     }
-    
+
+/* -------------------Main Index------------------- */
+
     .main-index{
         grid-template: 
             'caja-principal' 400px
@@ -34,37 +36,6 @@
             }        
         }
     } 
-
-/* -------------------Footer------------------- */
-
-    footer{
-        padding: 0 48px;
-        .logo{
-            width: 140px;
-        }
-        .caja-footer2{
-            .menu-nav-footer{
-                .menu-items-footer{
-                    width: 250px;
-                    font-size: 12px;
-                    justify-content: space-between;
-                    padding: 0;
-                }        
-            }
-            .copy-right{     /* ----Copyright---- */
-                text-align: center;
-                margin: 16px 0 0 0;
-                font-size: 12px;
-            }    
-        }
-        .caja-footer3{     /* ----Caja Footer íconos---- */
-            width: 150px;
-            .fa-whatsapp, .fa-instagram, .fa-tiktok{
-                font-size: 20px;
-                padding: 8px;
-            }    
-        }
-    }
 
 /* -------------------Main Conóceme------------------- */
 
@@ -107,35 +78,6 @@
         }        
     }
 
-    /* ----Textos---- */
-
-    .title-principal{
-        font-size: 30px;
-        margin-bottom: 40px;
-    }    
-
-    .p-main-pages{
-        font-size: 16px;
-    }
-
-    .second-title, .third-title{
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .third-title{
-        font-size: 16px;
-    }
-
-    .link{
-        font-size: 14px;
-        font-weight: bold;
-    } 
-
-    .label{
-        font-size: 14px;
-    }
-
 /* -------------------Main Promociones------------------- */
 
     .main-promociones{
@@ -169,9 +111,69 @@
         }
     }
 
+/* -------------------Footer------------------- */
+
+    footer{
+        padding: 0 48px;
+        .logo{
+            width: 140px;
+        }
+        .caja-footer2{
+            .menu-nav-footer{
+                .menu-items-footer{
+                    width: 250px;
+                    font-size: 12px;
+                    justify-content: space-between;
+                    padding: 0;
+                }        
+            }
+            .copy-right{     /* ----Copyright---- */
+                text-align: center;
+                margin: 16px 0 0 0;
+                font-size: 12px;
+            }    
+        }
+        .caja-footer3{     /* ----Caja Footer íconos---- */
+            width: 150px;
+            .fa-whatsapp, .fa-instagram, .fa-tiktok{
+                font-size: 20px;
+                padding: 8px;
+            }    
+        }
     }
 
-/* -------------------Dispositivos pequeños------------------- */
+/* ----------Textos---------- */
+
+    .title-principal{
+        font-size: 30px;
+        margin-bottom: 40px;
+    }    
+
+    .p-main-pages{
+        font-size: 16px;
+    }
+
+    .second-title, .third-title{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .third-title{
+        font-size: 16px;
+    }
+
+    .link{
+        font-size: 14px;
+        font-weight: bold;
+    } 
+
+    .label{
+        font-size: 14px;
+    }    
+
+    }
+
+/* ------------------------Dispositivos pequeños------------------------ */
 
 @media (max-width: 767px){
 
@@ -187,38 +189,46 @@
         .logo{
             width: 120px;
         }
-        .menu-items, .action_btn{
-            display: none;
+        .menu-btn {
+            display: block;
         }
-        .menu-nav{
-            .toggle_btn {
-                display: block;
-                align-items: end;
-                padding: 1rem 0.63rem;    
-            }
-        } 
-        .dropdown_menu{
-            display: none;
+        .menu-toggle:checked + .menu-btn .menu-icon:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 4px);
+        }
+        .menu-toggle:checked + .menu-btn .menu-icon:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle:checked + .menu-btn .menu-icon:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -3px);
+        }
+        .menu-toggle:checked + .menu-btn + nav{
+            opacity: 1; 
+            visibility: visible;
+        }
+        nav{
             position: absolute;
-            z-index: 1;
+            top: 80px;
             right: 0;
-            top: 3.5rem;
-            height: 0;
-            width: 10rem;
             background-color: rgb(53, 52, 52);
-            overflow: hidden;
-            transition: height 0.2s
-            &open{
-                transition-heigt: 11rem;
-                transition-padding: 0;
-            }
-            li{
-                padding: 0.5rem;
+            opacity: 0; /* Opacidad inicial en 0 */
+            visibility: hidden; /* Oculta el elemento */
+            transition: opacity 0.15s, visibility 0.15s;
+            .nav-links{
                 display: flex;
-                align-items: center;
-                justify-content: center;            
-            }
-        }        
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+                li{
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                    a {
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                }
+            }    
+        }            
     }
 
 /* -------------------Main Index------------------- */
@@ -254,32 +264,6 @@
             }                
         }
     } 
-    
-    /* -------------------Footer------------------- */
-
-    footer{
-        padding: 0 32px;
-        .logo{
-            width: 120px;
-        }
-        .caja-footer2{
-            .menu-nav-footer{
-                .menu-items-footer{
-                    display: none;
-                }        
-            }
-            .copy-right{     /* ----Copyright---- */
-                margin: 0;
-            }
-        }
-        .caja-footer3{      /* ----Caja Footer íconos---- */
-            width: 120px;
-            .fa-whatsapp, .fa-instagram, .fa-tiktok{
-                font-size: 16px;
-                padding: 5px;
-            }    
-        }
-    }
 
 /* -------------------Main Conóceme------------------- */
 
@@ -339,36 +323,6 @@
         }        
     }
 
-/* ----Textos---- */
-
-    .title-principal{
-        font-size: 20px;
-        margin-bottom: 24px;
-    }
-
-    .p-main-pages{
-        font-size: 14px;
-    }
-
-    .second-title{
-        font-size: 16px;
-    }
-
-    .third-title{
-        font-size: 14px;
-        font-weight: 400;
-    }
-
-    .link{
-        font-size: 12px;
-        font-weight: 400;
-        margin-top: 8px;
-    } 
-
-    .label{
-        font-size: 14px;
-    }
-
 /* -------------------Main Promociones------------------- */
 
     .main-promociones{
@@ -420,9 +374,65 @@
         }
     }
 
+/* -------------------Footer------------------- */
+
+    footer{
+        padding: 0 32px;
+        .logo{
+            width: 120px;
+        }
+        .caja-footer2{
+            .menu-nav-footer{
+                .menu-items-footer{
+                    display: none;
+                }        
+            }
+            .copy-right{     /* ----Copyright---- */
+                margin: 0;
+            }
+        }
+        .caja-footer3{      /* ----Caja Footer íconos---- */
+            width: 120px;
+            .fa-whatsapp, .fa-instagram, .fa-tiktok{
+                font-size: 16px;
+                padding: 5px;
+            }    
+        }
+    }
+
+/* ----------Textos---------- */
+
+    .title-principal{
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .p-main-pages{
+        font-size: 14px;
+    }
+
+    .second-title{
+        font-size: 16px;
+    }
+
+    .third-title{
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .link{
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 8px;
+    } 
+
+    .label{
+        font-size: 14px;
+    }
+
 }
 
-/* -------------------Dispositivos smarphones------------------- */
+/* ------------------------Dispositivos smarphones------------------------ */
 
 @media (max-width: 576px) {
 
@@ -437,6 +447,9 @@
         padding: 0 24px;
         .logo{
             width: 95px;
+        }
+        nav{
+            top: 56px;
         }    
     }
 

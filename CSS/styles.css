@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.principal-font, header .dropdown_menu li .item-dm a, .second-title, .third-title, .title-principal {
+.principal-font, .second-title, .third-title, .title-principal {
   font-family: "Merienda", cursive;
   color: #ECB935;
 }
@@ -129,12 +129,12 @@ header {
   grid-area: header;
   background-color: #0D0C0C;
   display: flex;
-  padding: 0 100px;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* Dropdown menu */
+  padding: 0 100px;
 }
-header .menu-items {
+header .nav-links {
   display: flex;
   gap: 20px;
   font-family: "Merienda", cursive;
@@ -143,41 +143,28 @@ header .menu-items {
   margin: 0;
   padding: 0;
 }
-header .menu-items li a {
+header .nav-links li a {
   color: #ECB935;
 }
-header .menu-items li a:hover {
+header .nav-links li a:hover {
   color: #f7e8c4;
 }
-header .toggle_btn {
-  color: #ECB935;
-  font-size: 1.5rem;
-  cursor: pointer;
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
   display: none;
 }
-header .dropdown_menu {
+
+.menu-btn {
   display: none;
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  top: 3.5rem;
-  height: 0;
-  width: 10rem;
-  background-color: rgb(53, 52, 52);
-  overflow: hidden;
-  transition: height 0.2s header .dropdown_menu open;
-  transition-transition-heigt: 11rem;
-  transition-transition-padding: 0;
 }
-header .dropdown_menu li {
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header .dropdown_menu li .item-dm a {
-  font-size: 16px;
-  font-weight: bold;
+
+.menu-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #ECB935;
+  margin: 3px 0;
+  transition: 0.4s;
 }
 
 .main-index {
@@ -463,7 +450,7 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   margin-top: 40px;
 }
 
-/* -------------------Dispositivos medianos------------------- */
+/* ------------------------Dispositivos medianos------------------------ */
 @media (min-width: 768px) and (max-width: 992px) {
   body {
     grid-template: "header" 100px "main" auto "footer" 100px;
@@ -474,41 +461,17 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   header .logo {
     width: 140px;
   }
-  header .menu-nav .menu-items {
+  header nav .nav-links {
     gap: 10px;
     font-size: 18px;
   }
+  /* -------------------Main Index------------------- */
   .main-index {
     grid-template: "caja-principal" 400px "sect-galery" auto "sect-agenda" auto;
     padding: 48px;
   }
   .main-index .sect-agenda .parrafo-agenda {
     width: 380px;
-  }
-  /* -------------------Footer------------------- */
-  footer {
-    padding: 0 48px;
-  }
-  footer .logo {
-    width: 140px;
-  }
-  footer .caja-footer2 .menu-nav-footer .menu-items-footer {
-    width: 250px;
-    font-size: 12px;
-    justify-content: space-between;
-    padding: 0;
-  }
-  footer .caja-footer2 .copy-right { /* ----Copyright---- */
-    text-align: center;
-    margin: 16px 0 0 0;
-    font-size: 12px;
-  }
-  footer .caja-footer3 { /* ----Caja Footer íconos---- */
-    width: 150px;
-  }
-  footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .caja-footer3 .fa-tiktok {
-    font-size: 20px;
-    padding: 8px;
   }
   /* -------------------Main Conóceme------------------- */
   .main-conoceme {
@@ -548,28 +511,6 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
     grid-template-rows: repeat(3, 90px);
     grid-template-columns: repeat(2, 90px);
   }
-  /* ----Textos---- */
-  .title-principal {
-    font-size: 30px;
-    margin-bottom: 40px;
-  }
-  .p-main-pages {
-    font-size: 16px;
-  }
-  .second-title, .third-title {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .third-title {
-    font-size: 16px;
-  }
-  .link {
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .label {
-    font-size: 14px;
-  }
   /* -------------------Main Promociones------------------- */
   .main-promociones {
     padding: 48px;
@@ -599,8 +540,55 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   .main-cotiza .caja-cotiza, .main-cotiza .caja-contacto, .main-contacto .caja-cotiza, .main-contacto .caja-contacto {
     margin-bottom: 48px;
   }
+  /* -------------------Footer------------------- */
+  footer {
+    padding: 0 48px;
+  }
+  footer .logo {
+    width: 140px;
+  }
+  footer .caja-footer2 .menu-nav-footer .menu-items-footer {
+    width: 250px;
+    font-size: 12px;
+    justify-content: space-between;
+    padding: 0;
+  }
+  footer .caja-footer2 .copy-right { /* ----Copyright---- */
+    text-align: center;
+    margin: 16px 0 0 0;
+    font-size: 12px;
+  }
+  footer .caja-footer3 { /* ----Caja Footer íconos---- */
+    width: 150px;
+  }
+  footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .caja-footer3 .fa-tiktok {
+    font-size: 20px;
+    padding: 8px;
+  }
+  /* ----------Textos---------- */
+  .title-principal {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .p-main-pages {
+    font-size: 16px;
+  }
+  .second-title, .third-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .third-title {
+    font-size: 16px;
+  }
+  .link {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .label {
+    font-size: 14px;
+  }
 }
-/* -------------------Dispositivos pequeños------------------- */
+/* ------------------------Dispositivos pequeños------------------------ */
 @media (max-width: 767px) {
   body {
     grid-template: "header" 80px "main" auto "footer" 80px;
@@ -611,33 +599,45 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   header .logo {
     width: 120px;
   }
-  header .menu-items, header .action_btn {
-    display: none;
-  }
-  header .menu-nav .toggle_btn {
+  header .menu-btn {
     display: block;
-    align-items: end;
-    padding: 1rem 0.63rem;
   }
-  header .dropdown_menu {
-    display: none;
+  header .menu-toggle:checked + .menu-btn .menu-icon:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 4px);
+  }
+  header .menu-toggle:checked + .menu-btn .menu-icon:nth-child(2) {
+    opacity: 0;
+  }
+  header .menu-toggle:checked + .menu-btn .menu-icon:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -3px);
+  }
+  header .menu-toggle:checked + .menu-btn + nav {
+    opacity: 1;
+    visibility: visible;
+  }
+  header nav {
     position: absolute;
-    z-index: 1;
+    top: 80px;
     right: 0;
-    top: 3.5rem;
-    height: 0;
-    width: 10rem;
     background-color: rgb(53, 52, 52);
-    overflow: hidden;
-    transition: height 0.2s header .dropdown_menu open;
-    transition-transition-heigt: 11rem;
-    transition-transition-padding: 0;
+    opacity: 0; /* Opacidad inicial en 0 */
+    visibility: hidden; /* Oculta el elemento */
+    transition: opacity 0.15s, visibility 0.15s;
   }
-  header .dropdown_menu li {
-    padding: 0.5rem;
+  header nav .nav-links {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  header nav .nav-links li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  header nav .nav-links li a {
+    font-size: 16px;
+    font-weight: bold;
   }
   /* -------------------Main Index------------------- */
   .main-index {
@@ -663,26 +663,6 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   .main-index .sect-agenda .parrafo-agenda {
     width: 300px;
     font-size: 14px;
-  }
-  /* -------------------Footer------------------- */
-  footer {
-    padding: 0 32px;
-  }
-  footer .logo {
-    width: 120px;
-  }
-  footer .caja-footer2 .menu-nav-footer .menu-items-footer {
-    display: none;
-  }
-  footer .caja-footer2 .copy-right { /* ----Copyright---- */
-    margin: 0;
-  }
-  footer .caja-footer3 { /* ----Caja Footer íconos---- */
-    width: 120px;
-  }
-  footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .caja-footer3 .fa-tiktok {
-    font-size: 16px;
-    padding: 5px;
   }
   /* -------------------Main Conóceme------------------- */
   .main-conoceme {
@@ -736,29 +716,6 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
     width: 72px;
     height: 72px;
   }
-  /* ----Textos---- */
-  .title-principal {
-    font-size: 20px;
-    margin-bottom: 24px;
-  }
-  .p-main-pages {
-    font-size: 14px;
-  }
-  .second-title {
-    font-size: 16px;
-  }
-  .third-title {
-    font-size: 14px;
-    font-weight: 400;
-  }
-  .link {
-    font-size: 12px;
-    font-weight: 400;
-    margin-top: 8px;
-  }
-  .label {
-    font-size: 14px;
-  }
   /* -------------------Main Promociones------------------- */
   .main-promociones {
     padding: 32px;
@@ -804,8 +761,51 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   .main-contacto .mapa {
     margin-top: 24px;
   }
+  /* -------------------Footer------------------- */
+  footer {
+    padding: 0 32px;
+  }
+  footer .logo {
+    width: 120px;
+  }
+  footer .caja-footer2 .menu-nav-footer .menu-items-footer {
+    display: none;
+  }
+  footer .caja-footer2 .copy-right { /* ----Copyright---- */
+    margin: 0;
+  }
+  footer .caja-footer3 { /* ----Caja Footer íconos---- */
+    width: 120px;
+  }
+  footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .caja-footer3 .fa-tiktok {
+    font-size: 16px;
+    padding: 5px;
+  }
+  /* ----------Textos---------- */
+  .title-principal {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  .p-main-pages {
+    font-size: 14px;
+  }
+  .second-title {
+    font-size: 16px;
+  }
+  .third-title {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .link {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 8px;
+  }
+  .label {
+    font-size: 14px;
+  }
 }
-/* -------------------Dispositivos smarphones------------------- */
+/* ------------------------Dispositivos smarphones------------------------ */
 @media (max-width: 576px) {
   body {
     grid-template: "header" 56px "main" auto "footer" 56px;
@@ -815,6 +815,9 @@ footer .caja-footer3 .fa-whatsapp, footer .caja-footer3 .fa-instagram, footer .c
   }
   header .logo {
     width: 95px;
+  }
+  header nav {
+    top: 56px;
   }
   footer {
     padding: 0 24px;
