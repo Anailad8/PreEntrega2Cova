@@ -280,13 +280,17 @@
             margin-bottom: 24px;
             .caja-texto-imagen{
                 height: 226px;
-                .caja-texto-conoceme, .caja-imagen-persona{
+                .caja-texto-conoceme{
+                    width: 70%;
                     height: 226px;
                     .p-main-pages{
                         font-size: 14px;
-                    }                
+                    }
+                }
+                .caja-imagen-persona{
+                    width: 30%;
+                    height: 226px;
                     .imagen-persona{
-                        width: 180px;
                         height: 226px;
                         object-position: top;
                     }

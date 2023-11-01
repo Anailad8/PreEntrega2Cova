@@ -1,17 +1,21 @@
 .button-agendar{
-    background-color: $primary-color;
+    background-color: $bg-main;
     width: 108px;
     height: 56px;
-    border: none;
+    border: 2px solid $primary-color;
     border-radius: 20px;
     font-family: $second-fond-f;
     font-size: 20px;
     font-weight: bold;
-    color: #0D0C0C;
+    color: $primary-color;
+    &:hover{
+        background-color: $primary-color;
+        color: $bg-hf;
+    }
 }
 
 .button-enviar{
-    background-color: #D9D9D9;
+    background-color: $second-color;
     margin-top: 24px;
     width: 78px;
     height: 36px;
